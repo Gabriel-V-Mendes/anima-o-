@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+body{
+    animation: gradiente 5s infinite alternate;
+    background: linear-gradient(45deg, purple, blue, pink, green,) no-repeat;
+    /* background-image: url(https://cdn.pixabay.com/photo/2021/01/08/13/38/road-5899921_1280.png); */
+    background-size: 300% 300%;
+    height: 100vh;
+    background-size: cover;
+    background-position: top;
+    overflow: hidden;
+}
+
+img{
+     width: 180px;
+    position: absolute;
+    bottom: 5px;
+     /* animation-name: move; 
+    animation-duration: 1s;
+    animation-timing-function:steps(100);
+    animation-delay: .1s;
+     animation-iteration-count: infinite; 
+     animation-direction: alternate; 
+    animation-fill-mode: backwards;
+     animation-play-state: running;  */
+
+    animation: move 5s ease;
+
+}
+
+img:hover{
+    animation-play-state: paused;
+}
+
+@keyframes move {
+    from{
+       transform: translateY(0, 0);
+    }
+
+    to{
+       transform: translateX(calc(100vw - 180px), 50px);
+    }
+}
+
+@keyframes gradiente {
+    from{
+        background-position: 0 50%;
+    }
+
+    to{
+        background-position: 100% 50%;
+    }
+}
